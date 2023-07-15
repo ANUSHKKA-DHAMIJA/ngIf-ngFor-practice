@@ -1,0 +1,49 @@
+body{
+    background-image: url("https://img.freepik.com/free-vector/realistic-white-golden-geometric-background_79603-2032.jpg?w=2000&t=st=1686165061~exp=1686165661~hmac=4cf681692d351e60805ccf1f2ddeb01f04ff5d7f001b76171b4908803f456aa1");
+    background-repeat: no-repeat;
+}
+
+.put{
+    border: 10px solid black;
+    padding: 40x;
+    border-width: 2px;
+    padding-bottom: 20px;
+
+}
+h1{
+    text-align: center;
+    color: rgb(0, 0, 0);
+    background-color: yellow; 
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.div-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.design1{
+    color: royalblue;
+}
+.design2{
+    color: rgb(225, 65, 110);
+}
+.design3{
+    color: rgb(10, 130, 26);
+}
+h2{
+    text-align: center;
+    color: rgb(0, 0, 0);
+    background-color: yellow; 
+    font-family: 'Courier New', Courier, monospace;
+}
+.error-input {
+    border: 1px solid red;
+}
+.red{
+    color: red;
+}

@@ -1,0 +1,62 @@
+<body>
+<div class="put">
+  <h1><u>ngFor</u></h1>
+  <div class="div-container">
+    Printing list of names in diff countries using ngFor and [ngClass]
+    <ol>
+      <li *ngFor="let people of peopleList; let i = index" class="design3">
+        {{ people.country }}
+        <ol>
+          <li
+            *ngFor="let detail of people.details; let j = index"
+            [ngClass]="'design' + (j + 1)"
+          >
+            {{ detail.Name }},{{ detail.Place }}
+            <br>
+          </li>
+        </ol>
+      </li>
+    </ol>
+  </div>
+  <h1><u>ngIf</u></h1>
+  <div class="div-container">
+    Telling if the person is found
+    <BR />
+    <BR />
+    <form>
+      NAME<BR /><input type="text" (keyup)="onNameChange($event)" /><BR /><BR />
+      PLACE<BR /><input
+        type="text"
+        (keyup)="onPlaceChange($event)"
+      /><BR /><BR />
+      <button (click)="checkIfEligible()">Check Eligibility</button>
+      <br />
+      <br />
+      <div>Result: {{ found }}</div>
+    </form>
+
+  </div>
+  <h2><u><span>Add user in the list</span></u></h2>
+  <div class="div-container">
+  <form>
+    COUNTRY<BR><input type="text" [ngClass]="{'error-input': showError && !newcountry }" [(ngModel)]="newcountry" name="Country" /><br><br>
+    NAME<BR /><input type="text" [ngClass]="{'error-input': showError && !newname}" [(ngModel)]="newname" name="name"/><BR /><BR />
+    PLACE<BR /><input type="text" [ngClass]="{'error-input': showError && !newplace}" [(ngModel)]="newplace" name="place"/><BR /><BR />
+    <button (click)="onclick()" >Add entry</button>
+    <br>
+    <!-- <p class="red" *ngIf="showError && !newcountry">Country is required</p>
+    <p class="red" *ngIf="showError && !newname">Name is required</p>
+    <p class="red" *ngIf="showError && !newplace">Place is required</p> -->
+
+    <p class="red" *ngIf="showError">
+      <span *ngIf="!newcountry">Country,</span>
+      <span *ngIf="!newname">Name & </span>
+      <span *ngIf="!newplace">Place</span>
+      <span > is required.</span>
+    </p>
+
+    <br>
+  </form>
+</div>
+</div>
+</body>
